@@ -3,9 +3,11 @@
 # Backup SPI NOR Flash and recover ATF/Backup Bootloader on MikroTik RB5009
 # (c) 2025 Felix Kaechele <felix@kaechele.ca>
 
+BB_VERSION="7.18.2"
+
 BROKEN_BACKUP_FILENAME="/mnt/RB5009-flash-backup-broken.bin"
 FIXED_BACKUP_FILENAME="/mnt/RB5009-flash-backup-fixed.bin"
-RESTORE_FILE="/usr/share/mikrotik/atf_bb.bin"
+RESTORE_FILE="/usr/share/mikrotik/bb-${BB_VERSION}-70x0.bin"
 
 err() {
     printf '%s\n' "Error: $*" >&2
